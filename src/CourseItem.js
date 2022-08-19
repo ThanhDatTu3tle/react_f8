@@ -1,9 +1,12 @@
-function CourseItem({ course, onClick }) {
+import courses from "./Api.js";
+console.log(courses.title);
+
+function CourseItem({ title, thumbnail, image }) {
     return (
       <div>
-        <h1 onClick={() => onClick(course)}>{course.title}</h1>
-        <p>{course.thumbnail}</p>
-        <p>{course.image}</p>
+        <h1>{title}</h1>
+        <p>{thumbnail}</p>
+        <p>{image}</p>
       </div>
     );
   }
